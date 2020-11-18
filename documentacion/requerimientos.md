@@ -21,4 +21,4 @@
 - Consultar el reporte del inventario
 - Realizar altas y bajas de códigos de producto
 - Administrar los permisos de los usuarios
--**Taller**
+
