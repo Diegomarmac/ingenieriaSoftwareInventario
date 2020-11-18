@@ -1,4 +1,4 @@
-# ingenieriaSoftwareInventario
+# Ingenieria de Software: Inventario
 ## Proyecto de la materia ingenieria de software
 Desarrollo de un sistema de inventario agregando los documentos necesarios
 - **ToDo:**
