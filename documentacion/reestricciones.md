@@ -1,0 +1,11 @@
+# Restricciones:
+- **Relacionadas al negocio**
+- Presupuesto
+- **Legales**
+- **Ambientales**
+- **Organizacionales**
+- **De recursos**
+- **Económicas**
+- **Técnicas**
+- **De tiempo**
+- Entregar antes del 31 de Enero del 2021
