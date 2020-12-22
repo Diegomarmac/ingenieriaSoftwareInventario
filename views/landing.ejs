@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<div class="container">
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Sistema de COEDIN</h1>
+                    <% if(!currentUser){ %>
+                        <p class="lead">Necesitas ingresar al sistema para realizar alguna accion</p>
+                    <%  } else { %>
+                        <p class="lead">Bienvenido <%= currentUser.username %></p>  
+                        <a href="/alumnos">Ver a todos los alumnos</a>
+                    <% } %>  
+                </div>
+        </div>
+
+</div>
+
+
+
+
+<% include partials/footer %>

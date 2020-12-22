@@ -1,3 +1,17 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<% include partials/header %>
+
+<div class="container">
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Sistema de COEDIN</h1>
+                    
+                    <p class="lead"> <%= currentUser.username %> No tienes permisos para realizar esta accion</p>   
+                </div>
+        </div>
+
+</div>
+
+
+
+
+<% include partials/footer %>

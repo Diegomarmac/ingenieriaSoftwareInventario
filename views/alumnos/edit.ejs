@@ -1,0 +1,110 @@
+<% include ../partials/header %>
+<div class="container">
+
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Pagina de Edicion de Alumnos</h1>
+                  <p class="lead">Usted va a Editar los datos del alumno </p>
+                  <a href="/alumnos">Ver a todos los alumnos</a>
+                </div>
+        </div>
+
+    <div class="container my-5">
+
+            <form action="/alumnos/<%= alumno._id %>?_method=PUT" method="POST">
+
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" name="alumno[nombre]" value="<%= alumno.nombre %>" >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Apellido Paterno</label>
+                        <input type="text" class="form-control" name="alumno[apellidopat]" value="<%= alumno.apellidopat %>" >
+                    </div>
+
+                    <div class="form-group">
+                        <label>Apellido Materno</label>
+                        <input type="text" class="form-control" name="alumno[apellidomat]" value="<%= alumno.apellidomat %>">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Foto</label>
+                        <input type="text" class="form-control" name="alumno[foto]" value="<%= alumno.foto %>">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Teléfono Local</label>
+                      <input type="text" class="form-control" name="alumno[telocal]"  value="<%= alumno.telocal %>">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Celular</label>
+                      <input type="text" class="form-control" name="alumno[telcel]" value="<%= alumno.telcel %>">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nombre del Tutor</label>
+                        <input type="text" class="form-control" name="alumno[nombretutor]" value="<%= alumno.nombretutor %>">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefono del Tutor</label>
+                        <input type="text" class="form-control" name="alumno[teltuto]" value="<%= alumno.teltuto %>">
+                    </div>
+
+                    <div class="form-group">
+                            <label>Direccion del Alumno</label>
+                            <textarea class="form-control" name="alumno[direalu]" rows="3"> <%= alumno.direalu %> </textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Capacitacion para Trabajo</label>
+                        <select class="form-control" name="alumno[captra]">
+                          <option selected> <%= alumno.captra %> </option>
+                          <option>Administracion de Recursos Humanos</option>
+                          <option>Contabilidad</option>
+                          <option>Informatica</option>
+                          
+                        </select>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label>Tipo de Plan a Capacitarse</label>
+                        <select class="form-control" name="alumno[tipoplan]">
+                          <option selected> <%= alumno.tipoplan%> </option>
+                          <option>Tradicional</option>
+                          <option>A Distancia Pago Unico</option>
+                          <option>A Distancia Pago Semanal</option>
+                          <option>A Distancia Pago Quincenal</option>
+                          
+                        </select>
+                      </div>
+  
+                      <div class="form-group">
+                        <label>Fecha de Examen</label>
+                        <select class="form-control" name="alumno[fechae]">
+                          <option selected> <%= alumno.fechae %> </option>
+                          <option>Marzo</option>
+                          <option>Junio</option>
+                          <option>Septiembre</option>
+                          <option>Noviembre</option>
+                          
+                        </select>
+                      </div>
+
+                    <div class="form-group">
+                        <label>Nombre del Asesor</label>
+                        <input type="text" class="form-control" name="alumno[nombreasesor]" value="<%= alumno.nombreasesor %>">
+                    </div>
+ 
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">Editar !</button>
+                </form>
+    </div>
+    
+
+
+</div>
+
+ 
+<% include ../partials/footer %>

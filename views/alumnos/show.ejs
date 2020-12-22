@@ -1,0 +1,59 @@
+<% include ../partials/header %>
+
+<div class="container">
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Bienvenido !</h1>
+                  <p class="lead">Bienvenido al sistema COEDIN</p>
+                  <p class="lead">Estas viendo mas informacion de un alumno</p>
+                  <a href="/alumnos">Ver a todos los alumnos</a>
+                </div>
+        </div>
+
+        <div class="container">
+
+            <div class="card">
+                <img src=" <%= alumno.foto %> " alt="" class="card-img-top img-fluid">
+                <div class="card-title">
+                    <h5><%= alumno.apellidopat%> <%= alumno.apellidomat%> <%= alumno.nombre%> </h5>
+                </div>
+                <div class="card-body">
+
+                    <p class="card-text">
+                        Datos Alumno:
+                        <p> Telefono Local: <%=alumno.telocal%> </p>
+                        <p>Celular: <%=alumno.telcel%> </p>
+                        <p>Direccion: <%= alumno.direalu%> </p>
+                        <hr>
+                        Datos Tutor:
+                        <p> Telefono: <%=alumno.teltuto%> </p>
+                        <p>Nombre: <%=alumno.nombretutor%> </p>
+                        <hr>
+                        Nombre del Asesor: <%=alumno.nombreasesor%>
+                        <hr>
+                        Tipo de Capacitacion para trabajo: <%=alumno.captra%>
+                        <hr>
+                        Tipo de Plan: <%=alumno.tipoplan%>
+                        <hr>
+                        Fecha de Examen: <%=alumno.fechae%>
+                        <hr>
+                        Fecha de Inscripcion: <%= alumno.created.toDateString() %>
+
+                    </p>
+                    
+
+                    <a href="/alumnos/<%= alumno._id %>/edit" class="btn btn-info">Modificar Alumno</a>
+                    <form action="/alumnos/<%= alumno._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Eliminar Alumno</button>
+                    </form>
+                    
+            </div>
+
+        </div>
+
+</div>
+
+
+
+
+<% include ../partials/footer %>

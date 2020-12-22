@@ -1,0 +1,107 @@
+<% include ../partials/header %>
+<div class="container">
+
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Pagina de Alumno Nuevo</h1>
+                  <p class="lead">Usted va a ingresar a un alumno nuevo</p>
+                  <a href="/alumnos">Ver a todos los alumnos</a>
+                </div>
+        </div>
+
+    <div class="container my-5">
+
+            <form action="/alumnos" method="POST">
+
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" name="alumno[nombre]" placeholder="Nombre(s)" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Apellido Paterno</label>
+                        <input type="text" class="form-control" name="alumno[apellidopat]" placeholder="Apellido Paterno" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Apellido Materno</label>
+                        <input type="text" class="form-control" name="alumno[apellidomat]" placeholder="Apellido Materno" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Foto</label>
+                        <input type="text" class="form-control" name="alumno[foto]" placeholder="Link de la foto">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Teléfono Local</label>
+                      <input type="text" class="form-control" name="alumno[telocal]"  placeholder="Numero Local" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Celular</label>
+                      <input type="text" class="form-control" name="alumno[telcel]" placeholder="Numero de Celular" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nombre del Tutor</label>
+                        <input type="text" class="form-control" name="alumno[nombretutor]" placeholder="Nombre del tutor" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefono del Tutor</label>
+                        <input type="text" class="form-control" name="alumno[teltuto]" placeholder="Numero del tutor" required>
+                    </div>
+
+                    <div class="form-group">
+                            <label>Direccion del Alumno</label>
+                            <textarea class="form-control" name="alumno[direalu]" rows="3" placeholder="Calle y numero, Colonia, Municipio o delegacion, entidad federativa, CP" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Capacitacion para Trabajo</label>
+                        <select class="form-control" name="alumno[captra]" required>
+                          <option>Administracion de Recursos Humanos</option>
+                          <option>Contabilidad</option>
+                          <option>Informatica</option>
+                          
+                        </select>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label>Tipo de Plan a Capacitarse</label>
+                        <select class="form-control" name="alumno[tipoplan]" required>
+                          <option>Tradicional</option>
+                          <option>A Distancia Pago Unico</option>
+                          <option>A Distancia Pago Semanal</option>
+                          <option>A Distancia Pago Quincenal</option>
+                          
+                        </select>
+                      </div>
+  
+                      <div class="form-group">
+                        <label>Fecha de Examen</label>
+                        <select class="form-control" name="alumno[fechae]" required>
+                          <option>Marzo</option>
+                          <option>Junio</option>
+                          <option>Septiembre</option>
+                          <option>Noviembre</option>
+                          
+                        </select>
+                      </div>
+
+                    <div class="form-group">
+                        <label>Nombre del Asesor</label>
+                        <input type="text" class="form-control" name="alumno[nombreasesor]" placeholder="Nombre del Asesor" required>
+                    </div>
+ 
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">Enviar</button>
+                </form>
+    </div>
+    
+
+
+</div>
+
+ 
+<% include ../partials/footer %>

@@ -1,0 +1,52 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <h1>
+            Bienvenido
+        </h1>
+        <p>Bienvenido al sistema de COEDIN</p>
+        <br>
+        <p>Estas viendo  a todos los alumnos registrados</p>
+        <!-- <p> <%= currentUser %> </p> -->
+    </header>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Apellido Paterno</th>
+                    <th scope="col">Apellido Materno</th>
+                    <th scope="col">Nombre(s)</th>
+                    <th scope="col">Asesor</th>
+                    <th scope="col">Capacitacion</th>
+                    <th scope="col">Tipo de Plan</th>
+                    <th scope="col">Fecha Examen</th>
+                    <th scope="col">Fecha de Inscripcion</th>
+                    <th scope="col">Ver Mas</th>
+                </thead>
+                <tbody>
+
+                    <% alumnos.forEach(function(alumno){ %>
+                        <tr>
+                            <td> <img src="<%= alumno.foto %>" class="img-fluid"></td>
+                            <td><%= alumno.apellidopat %></td>
+                            <td><%= alumno.apellidomat %></td>
+                            <td><%= alumno.nombre %></td>
+                            <td><%=alumno.nombreasesor%></td>
+                            <td><%=alumno.captra%></td>
+                            <td><%=alumno.tipoplan%></td>
+                            <td><%=alumno.fechae%></td>
+                            <td><%= alumno.created.toDateString() %></td>
+                            <td> <a href="/alumnos/<%= alumno._id %>" class="btn btn-primary">Mas info</a> </td>
+                        </tr>    
+     
+            <% }); %>
+
+                </tbody>
+
+            </table>
+        </div>
+</div>
+
+<%include ../partials/footer %>
