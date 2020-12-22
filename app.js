@@ -10,7 +10,7 @@ var express          = require("express"),
     User             = require("./models/user");
 
 //APP CONFIG
-mongoose.connect("mongodb+srv://alpha:AlphaIsnotH3r3@diegocluster-nhnkp.mongodb.net/coedin?retryWrites=true", {useNewUrlParser:true} );
+mongoose.connect // AQUI VAN TUS DATOS DE CONEXION
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(expressSanitizer());
 app.use(express.static("public"));
@@ -118,7 +118,7 @@ app.put("/alumnos/:id", function(req, res){
 
 //DELETE ROUTE
 app.delete("/alumnos/:id",isLoggedIn, function(req,res){
-    if(req.user.username === "Alpha"){
+    if(req.user.username === "AQUIVAUNUSUARIO"){ // CAMBIARLO POR TU USUARIO
         Alumno.findByIdAndRemove(req.params.id, function(err){
             if(err){
                 res.redirect("/alumnos");
@@ -126,7 +126,7 @@ app.delete("/alumnos/:id",isLoggedIn, function(req,res){
                 res.redirect("/alumnos");
             }
         });
-    } else if(req.user.username === "Eduardo"){
+    } else if(req.user.username === "AQUIVAUNUSUARIO"){ //CAMBIARLO POR TU USUARIO
         Alumno.findByIdAndRemove(req.params.id, function(err){
             if(err){
                 res.redirect("/alumnos");
@@ -152,9 +152,9 @@ app.get("/error", isLoggedIn, function(req, res){
 // =============================
 
 app.get("/register",isLoggedIn, function(req, res){
-    if(req.user.username === "Alpha"){
+    if(req.user.username === "YASABES...USUARIO"){
         res.render("register");
-    } else if(req.user.username === "Eduardo"){
+    } else if(req.user.username === "YASABES..."){
         res.render("register");
     } else {
         res.redirect("/error");
